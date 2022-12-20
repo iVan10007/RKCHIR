@@ -1,0 +1,80 @@
+@keyframes stripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 0;
+    }
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+.header_logo_link{
+    margin-bottom: 100px;
+}
+
+.registration{
+    width: 650px;
+    margin: auto;
+    background: linear-gradient(180deg, #193A4D 0%, rgba(65, 128, 164, 0.552083) 44.79%, rgba(48, 66, 77, 0.21) 100%);
+    border-radius: 40px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+.block{
+    margin-left: 41px;
+    margin-right: 41px;
+    background: white;
+    border-radius: 40px;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.reg_box{
+    width: 438px;
+    height: 20px;
+    background-color: #DCD6D6;
+    margin-bottom: 12px;
+}
+
+input:focus{
+    background-color: antiquewhite;
+}
+
+input::placeholder{
+   color:navy;
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color:black
+}
+
+#submit {
+    margin: 10px 20px;
+    padding: 15px 30px;
+    overflow: hidden;
+    border: 2px solid;
+    border-bottom-width: 4px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgba(30, 255, 188, 1);
+    background: rgba(255, 255, 255, 1);
+    transition: color .3s, background .5s;
+}
+
+#submit:hover {
+    animation: stripes .75s infinite linear;
+    background: linear-gradient(45deg, rgba(30, 255, 188, 1) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(30, 255, 188, 1) 50%, rgba(30, 255, 188, 1) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1));
+    background-size: 10px 10px;
+    color: #FF50E5;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}

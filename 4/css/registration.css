@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+.header_logo_link{
+    margin-bottom: 100px;
+}
+.registration{
+    width: 650px;
+    margin: auto;
+    background: linear-gradient(180deg, #193A4D 0%, rgba(65, 128, 164, 0.552083) 44.79%, rgba(48, 66, 77, 0.21) 100%);
+    border-radius: 40px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+.block{
+    margin-left: 41px;
+    margin-right: 41px;
+    background: #FFFFFF;
+    border-radius: 40px;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.reg_box{
+    width: 438px;
+    height: 20px;
+    background-color: #DCD6D6;
+    margin-bottom: 12px;
+}
+
+input:focus{
+    background-color: antiquewhite;
+}
+
+input::placeholder{
+   color:navy;
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color:black
+}
+
+.gender{
+   color: black; 
+}
+
+#submit{
+    margin-top: 10px;
+}
+
+footer{
+    position: fixed;
+    width: 100vw;
+    bottom: 0px;
+}

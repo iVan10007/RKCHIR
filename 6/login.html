@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/favicon.jpg">
+
+        <link rel='stylesheet' href="./css/reset.css">
+        <link rel='stylesheet' href="./css/style.css">
+        <link rel='stylesheet' href="./css/login.css">
+
+        <title>Регистрация</title>
+    </head>
+
+<body>
+    <a href="index.html" class="header_logo_link">
+        <img class ="logo_img" src = "./img/logo.svg" width="150px" height="150px" alt = "AutoDrive">
+    </a>
+    <div class="registration">
+        <div class="block">
+            <h1 class = "header">Вход </h1>
+            <form  class="reg" method="POST">
+                <input type="email" name="login" class="reg_box" placeholder="Логин (email)" required>
+                <input type="password" name = "password" class= reg_box placeholder="Пароль" min="3" max = "8" required>
+                <input type="submit" id="submit" value="Войти"></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer">
+            <h2 id="end">Контакты</h2>
+            <address>
+                <a href="tel:01234567890" class="footer_link">Наш телефон 01234567890</a>
+                <br>
+                <a href="mailto:sendemail@gmail.com" class="footer_link">Наша почта sendemail@gmail.com</a>
+                <br>
+                <a href="https://www.google.com" class="footer_link">Политика конфиденциальности</a>
+                <p>"ООО AutoDrive" г.Москва, пр-кт Вернадского 78</p>
+            </address>
+        </div>
+    </footer>
+</body>

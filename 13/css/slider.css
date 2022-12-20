@@ -1,0 +1,60 @@
+body{
+    min-height: 100%;
+    max-width: 100%;
+    background-color: #1d2030;
+    color:white;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+#slider {
+    width:300px;
+    margin-left:20px;
+    height:10px;
+    background: black;
+    border-radius:10px;
+    margin-top:45px;
+}
+  
+#item {
+    width:10px;
+    height:30px;
+    position:relative;
+    top:-10px;
+    left:0px;
+    background:yellow;
+    border-radius:10px;
+    border:1px solid black;
+}
+
+#result {
+    margin:20px;
+}
+
+.print{
+    margin-top: 50px;
+}
+.print button{
+  margin-top: 10px;
+}
+
+#field{
+    margin-top: 50px;
+    height: 200px;
+    border-bottom: 3px black groove;
+    position: relative;
+}
+
+#ball {
+    position: absolute;
+    cursor: pointer;
+}

@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Medula+One&family=Roboto:ital,wght@0,500;0,700;1,700&display=swap');
+
+body{
+    background-color: #1B1E2D;
+    color:white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    display:grid;
+    grid-template-columns: 1fr 70% 1fr; 
+    grid-template-rows: 100px auto 1fr;
+    grid-template-areas: 
+    "header header header"
+    "side content aside"
+    "footer footer footer";
+}
+
+@media screen and (max-width: 1300px){ 
+    body{
+    grid-template-columns: 1fr 70%; 
+    grid-template-rows: 100px auto auto;
+    grid-template-areas: 
+    "header header"
+    "side content"
+    "aside content"
+    "footer footer";
+    }
+}
+
+@media screen and (max-width: 700px){ 
+    body{
+    grid-template-columns: 100%; 
+    grid-template-rows: 100px auto auto auto auto;
+    grid-template-areas: 
+    "header"
+    "side"
+    "content"
+    "aside"
+    "footer";
+    }
+
+    header{
+        padding-left: 20px;
+    }
+    main{
+        margin-left: 20px;
+    }
+}
+/* ########################## Header ################################# */
+header{
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    grid-area: header;
+    position: fixed;
+    background: rgba( 0, 0, 0, 0.3 );
+    backdrop-filter: blur( 8px );
+    border-radius: 0px 0px 20px 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 1;
+}
+
+#menu_burger{
+    visibility: hidden;
+}
+
+#menu_toggle {
+    opacity: 0;
+}
+
+.menu_btn{
+    display: flex; 
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu_btn span, .menu_btn span::before, .menu_btn span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.menu_btn span::before {
+    content: '';
+    top: -10px;
+}
+
+.menu_btn span::after {
+    content: '';
+    top: 10px;
+}
+
+.menu_box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    padding-top: 100px;
+    right: -100%;
+    width: 150px;
+    height: 100%;
+    list-style: none;
+    text-align: center;
+    background-color: #11131b;
+}
+
+.menu_item {
+    display: block;
+    padding: 12px 24px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: calc(15px + 5 * (100vw/1440));
+    text-decoration: none;
+}
+
+.menu_item:hover {
+    background-color: darkblue;
+}
+
+#menu_toggle:checked ~ .menu_btn span {
+    transform: rotate(45deg);
+}
+
+#menu_toggle:checked ~ .menu_btn span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu_toggle:checked ~ .menu_btn span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu_toggle:checked ~ .menu_box {
+    visibility: visible;
+    right: 0;
+}
+
+@media screen and (max-width: 1000px){ 
+    .navigation
+    {
+        visibility: hidden;
+    }
+
+    #menu_burger{
+        visibility: visible;
+    }
+
+    main{
+        margin-right: 160px;
+    }
+}
+
+.navigation_links{
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+.navigation_links a{
+    color:white;
+    text-decoration: none;
+    font-size: calc(15px + 5 * (100vw/1440));
+    font-style: italic;
+    margin-right: 10px;
+}
+
+.navigation_links a:hover{
+    color:rgb(202, 63, 63);
+    text-decoration: none;
+    font-size: calc(15px + 5 * (100vw/1440));
+    font-style: italic;
+    margin-right: 10px;
+    transition: all 0.4s;
+}
+
+.logo{
+    font-family: 'Medula One', cursive;
+    font-size: calc(40px + 7 * (100vw/1440));
+    text-decoration: none;
+    color:white;
+    margin-right: 50px;
+    white-space: nowrap;
+    text-shadow: none;
+}
+
+.logo:hover{
+    text-shadow: 2px 2px 2px rgb(22, 91, 219);
+    transition: all 0.5s;
+}
+
+.logo:active{
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+.navigation{
+    margin-left: 30px;
+    display: flex;
+}
+
+.reg_log{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    border: 3px solid #20f3e8b4;
+    border-radius: 30px;
+}
+
+.reg_log a{
+    color:white;
+    text-decoration: none;
+    font-size: 3vmin;
+    font-weight: bold;
+}
+
+.reg_log a:hover{
+    color: gold;
+    text-shadow: 
+     1px  1px 3px red, 
+     1px -1px 3px red,  
+    -1px  1px 3px red,  
+    -1px -1px 3px red;  
+    transition: all 0.4s;
+}
+
+
+.reg_log .line{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 2px;
+    height: 90%;
+    background-color: white;
+}
+
+/* ########################## Main ################################# */
+main{
+    margin-top: 50px;
+    grid-area: content;
+}
+
+main h2{
+    font-size: calc(30px + 5 * (100vw/1440));
+    margin-bottom: 20px;
+}
+
+#stocks aside h2{
+    font-size: calc(20px + 5 * (100vw/1440));
+    margin-bottom: 20px;
+}
+
+#info p{
+    font-size: calc(20px + 5 * (100vw/1440));
+}
+
+#info, #stocks, #news{
+    margin-bottom: 50px;
+}
+
+.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.offers img{
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block {
+    margin-right: 50px;
+    width: 250px;
+}
+
+.block img{
+    width: 250px;
+}
+
+.block .trade-in{
+    background-color: black;
+    opacity: 0;
+}
+
+.block img:hover{
+    cursor: pointer;
+}
+
+.block:hover .trade-in{
+    opacity: 0.85;
+    transform: translateY(-50px);
+    transition: 0.5s;
+}
+
+/* ########################## Aside ################################# */
+
+aside{
+    margin-top: 50px;
+    margin-left: 20px;
+    grid-area: aside;
+}
+
+aside h2{
+    font-size: calc(25px + 5 * (100vw/1440));
+    margin-bottom: 10px;
+}
+
+aside a{
+    color:white;
+    text-decoration: none;
+    font-size: calc(10px + 5 * (100vw/1440));
+    font-style: italic;
+    margin-right: 10px;
+}
+
+aside a:hover{
+    color:rgb(243, 215, 181);
+    transition: all 0.4s;
+}
+
+/* ########################## Footer ################################# */
+footer{
+    padding-bottom: 10px;
+    display: grid;
+    grid-area: footer;
+    width:100%;
+    color:white;
+    background-color: black;
+
+    grid-template-columns: 20% 20% 20% 20%; 
+    grid-template-rows:  auto auto auto;
+    grid-template-areas: 
+    "el1 el2 el3 el4"
+    "it1 it2 it3 it4" 
+    "copyright copyright copyright copyright";
+
+    justify-content:center;
+}
+
+@media screen and (max-width: 1440px){ 
+    footer{
+    grid-template-columns: 40% 40%; 
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "el1 el2"
+    "it1 it2"
+    "el3 el4"
+    "it3 it4"
+    "copyright copyright";
+    }
+}
+
+@media screen and (max-width: 700px){ 
+    footer{
+    padding-left: 20px;
+    grid-template-columns: 100%; 
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    grid-template-areas: 
+    "el1"
+    "it1"
+    "el2"
+    "it2"
+    "el3"
+    "it3"
+    "el4"
+    "it4"
+    "copyright";
+    }
+}
+
+footer h2{
+    font-size: calc(20px + 5 * (100vw/1440));
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer .name{
+    padding-top: 20px;
+    grid-area: el1;
+    margin-bottom: 50px;
+}
+footer .name:after, .clients:after, .contacts:after, .partners:after{
+    content: "";
+    width: calc(117px + 7 * (100vw/1440));
+    height: 2px;
+    background: white;
+    position: absolute;
+    display: block;
+}
+
+footer .description{
+    grid-area: it1;
+}
+
+footer .clients{
+    grid-area: el2;
+    padding-top: 20px;
+}
+
+footer .contacts{
+    grid-area: el3;
+    padding-top: 20px;
+}
+
+footer .privacy{
+    grid-area: it2;
+}
+
+footer address{
+    grid-area: it3;
+}
+
+footer .partners{
+    grid-area: el4;
+    padding-top: 20px;
+}
+
+footer .partners1{
+    grid-area: it4;
+}
+
+footer .copyright{
+    grid-area: copyright;
+    margin-top: 40px;
+    justify-self: center;
+}
+
+address .footer_link{
+    margin-bottom: 50px;
+}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/favicon.jpg">
+
+        <link rel='stylesheet' href="./css/reset.css">
+        <link rel='stylesheet' href="./css/style.css">
+        <link rel='stylesheet' href="./css/registration.css">
+
+        <title>Регистрация</title>
+    </head>
+
+<body>
+    <a href="index.html" class="header_logo_link">
+        <img class ="logo_img" src = "./img/logo.svg" width="150px" height="150px" alt = "AutoDrive">
+    </a>
+    <div class="registration">
+        <div class="block">
+            <h1 class = "header">Регистрация </h1>
+            <form  class="reg" method="POST">
+                <input type="text" name="surname" id="surname" class="reg_box" placeholder="Фамилия*" required>
+                <input type="text" name="name" class="reg_box" placeholder="Имя*" required>
+                <input type="text" name="patronymic" class="reg_box" placeholder="Отчество (при наличии)">
+                <input type="email" name="login" class="reg_box" placeholder="Логин (email)*" required>
+                <input type="tel" name = "telephone" class= reg_box placeholder="Номер телефона xxx-xx-xxx*" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                <input type="password" name = "password" class= reg_box placeholder="Пароль*" min="3" max = "8" required>
+                <input type="password" name = "confirm_password" class= reg_box placeholder="Повторите пароль*" min="3" max = "8" required>
+                <p class="gender">Пол:</p>
+                <div class = "gender">
+                    <input name="gender" id="male_gender" type="radio" value="male" checked>
+                    <label for="male_gender">Мужской</label>
+                    <input name="gender" id="female_gender" type="radio" value="female"> 
+                    <label for="female_gender">Женский</label>
+                </div>
+                <p><input type="submit" id="submit" value="Зарегистрироваться"></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer">
+            <h2 id="end">Контакты</h2>
+            <address>
+                <a href="tel:01234567890" class="footer_link">Наш телефон 01234567890</a>
+                <br>
+                <a href="mailto:sendemail@gmail.com" class="footer_link">Наша почта sendemail@gmail.com</a>
+                <br>
+                <a href="https://www.google.com" class="footer_link">Политика конфиденциальности</a>
+                <p>"ООО AutoDrive" г.Москва, пр-кт Вернадского 78</p>
+            </address>
+        </div>
+    </footer>
+</body>

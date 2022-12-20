@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/favicon.jpg">
+
+        <link rel='stylesheet' href="./css/reset.css">
+        <link rel='stylesheet' href="./css/style.css">
+        <link rel='stylesheet' href="./css/rewies.css">
+
+        <title>Отзывы</title>
+    </head>
+
+    <body>
+        <a href="index.html" class="header_logo_link">
+            <img class ="logo_img" src = "./img/logo.svg" width="150px" height="150px" alt = "AutoDrive">
+        </a>
+        <h1>Отзывы</h1>
+
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0"></iframe>
+        
+        <label for="city">Выберите ваш город из списка</label>
+        <select name="city">
+            <option value="Moscow">Москва</option>
+            <option value="Peter" selected>Санкт-Петербург</option>
+            <option value="value3">Екатеринбург</option>
+        </select>
+
+        <label for="file">Прикрепить фото к отзыву</label>
+        <input name="file"  id = "file" type="file">
+
+        <fieldset>
+            <legend>Чтобы вы могли отметить в обслуживании?</legend>
+        
+            <div>
+              <input type="checkbox" id="verygood" name="rating">
+              <label for="verygood">Вежливый персонал</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="good" name="rating">
+                <label for="good">Быстро</label>
+            </div>
+        
+            <div>
+                <input type="checkbox" id="bad" name="rating">
+                <label for="bad">Удобно</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="verybad" name="rating">
+                <label for="verybad">Просто</label>
+            </div>
+        </fieldset>
+
+        <label for="rewie"> Текст вашего отзыва:</label>
+        <textarea id="rewie" name="rewie" rows="5" cols="50" minlegth="5" maxlength="30" placeholder="Aboba"></textarea>
+
+        <p>Укажите дату обращения в автосалон</p>
+        <input type="datetime-local" name="date" id="date">
+
+        <button id = button>Добавить отзыв</button>
+    
+        <footer>
+            <div id="footer">
+                <h2 id="end">Контакты</h2>
+                <address>
+                    <a href="tel:01234567890" class="footer_link">Наш телефон 01234567890</a>
+                    <br>
+                    <a href="mailto:sendemail@gmail.com" class="footer_link">Наша почта sendemail@gmail.com</a>
+                    <br>
+                    <a href="https://www.google.com" class="footer_link">Политика конфиденциальности</a>
+                    <p>"ООО AutoDrive" г.Москва, пр-кт Вернадского 78</p>
+                </address>
+            </div>
+        </footer>
+    </body>

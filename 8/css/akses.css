@@ -1,0 +1,90 @@
+.cards, .cards1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    transition: 0.4s;
+    background: linear-gradient(135deg, #ed0984,#ff8530,#d4ed3d);
+    filter: brightness(0.75);
+}
+
+.cards .card:hover{
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+.cards:hover > .card:not(:hover)
+{
+  filter: brightness(0.5) blur(10px);
+}
+
+
+.cards1 .card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 30px auto;
+  width: 200px;
+  height: 200px;
+  font-size: 24px;
+  font-family: 'Roboto Condensed', sans-serif;
+  box-shadow: inset 0 0 0 1px #337AB7;   
+}
+
+.cards1 .card::before,
+.cards1 .card::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  z-index: -1;
+  margin: -5%;
+  box-shadow: inset 0 0 0 6px #BFE2FF;
+  animation: anim-ramka-3 8s linear infinite;
+  opacity: 0%;
+}
+
+.cards1 .card::before {
+    animation-delay: -4s;
+}
+
+.cards1 .card:hover
+{
+  filter: brightness(1);
+}
+.cards1 .card:hover::before, .cards1 .card:hover::after
+{
+  filter: brightness(1);
+  opacity: 100%;
+  transition: all 0.5s ease;
+}
+
+
+@keyframes anim-ramka-3 {
+    0%, 100% {
+        clip: rect(0px, 220px, 6px, 0px);
+    }
+    25% {
+        clip: rect(0px, 6px, 220px, 0px);
+    }
+    50% {
+        clip: rect(218px, 220px, 220px, 0px);
+    }
+    75% {
+        clip: rect(0px, 220px, 220px, 218px);
+    }
+}

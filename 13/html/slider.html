@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="../img/favicon.jpg">
+
+        <link rel='stylesheet' href="../css/reset.css">
+        <link rel='stylesheet' href="../css/slider.css">
+
+        <title>Слайдер</title>
+    </head>
+
+    <body>
+        <header id="header">
+            <a href="index.html" class="header_logo_link">
+                <img class ="logo_img" src = "../img/logo.svg" width="150px" height="150px" alt = "AutoDrive">
+            </a>
+        </header>
+
+        <div class="container">
+            <div id="slider">
+                <div id="item"></div>
+            </div>
+
+            <div id="result">0%</div>
+            <script src="../js/slider.js"></script>
+
+            <div class="print">
+                <p id="demo"></p>
+                <button onclick="typeWriter()">Напечатать текст</button>
+            </div>
+
+            <div id="field">
+                <img src="../img/ball.svg" id="ball">
+            </div>
+
+            <script src="../js/animation.js"></script>
+        </div> 
+    </body>
+</html>

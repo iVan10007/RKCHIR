@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+}
+
+a{
+    align-self: start;
+}
+
+h1{
+    font-size: 3em;
+    margin-bottom: 20px;
+    color:white
+}
+
+h2{
+    font-size: 1em;
+}
+
+iframe{
+    margin-bottom: 1%;
+}
+
+select{
+    margin-bottom: 1%;
+}
+
+input{
+    margin-bottom: 1%;
+}
+
+legend{
+    margin-bottom: 5px;
+}
+
+textarea{
+    margin-bottom: 1%;
+}
+
+#date{
+    margin-bottom: 1%;
+}
+
+#button{
+    margin-bottom: 1%;
+}
+
+footer{
+    width: 100%;
+}
